@@ -144,3 +144,18 @@ body{
     padding-bottom: 20px;
     color: #ff3377;
 }
+
+.footer{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background-color: #ff4885;
+    height: 100px;
+    text-align: center;
+
+}
+
+.footer h3{
+    color: #fffdfc;
+    margin-top: 30px;
+}

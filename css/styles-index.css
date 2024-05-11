@@ -1,0 +1,146 @@
+body{
+    font-family: "Cabin", sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header{
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.7), 
+        rgba(0, 0, 0, 0.7)),
+        url(/img/imagen-principal2.jpg);
+
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+}
+
+.menu{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    color: #fffdfc;
+    font-size: 25px;
+    font-weight: 800px;
+    transition: color 0.3s ease;
+}
+
+.logo:hover{
+    color: #ff3377
+}
+
+.menu .navbar ul li{
+    position: relative;
+    float: left;
+}
+
+.menu .navbar ul li a{
+    font-size: 18px;
+    padding: 20px;
+    color: #fffdfc;
+    display: block;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.menu .navbar ul li a:hover{
+    color: #ff3377;
+}
+
+#menu{
+    display: none;
+}
+
+.menu-icono{
+    width: 25px;
+}
+
+.menu label{
+    cursor: pointer;
+    display: none;
+}
+
+.header-content{
+    text-align: center;
+
+}
+
+.header-content h1{
+    font-size: 75px;
+    line-height: 80px;
+    color: #fffdfc;
+    text-transform: uppercase;
+    margin-bottom: 35px;
+}
+
+.header-content p{
+    font-size: 16px;
+    color: #c5c5c5;
+    padding: 0 250px;
+    margin-bottom: 25px;
+}
+
+.btn-1{
+    display: inline-block;
+    padding: 11px 35px;
+    background-color: #ff3377;
+    color: #fffdfc;
+    text-transform: uppercase;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-1:hover{
+    background-color: #ff4885;
+}
+
+.card-container{
+    display: flex;
+    flex-direction: row;
+    padding-top: 100px;
+    padding-bottom: 60px;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.card{
+    text-align: center;
+    color: black;
+    padding: 30px;
+    width: 350px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 25px;
+}
+
+.card img{
+    width: 100px;
+    padding-bottom: 20px;
+}
+
+.card h2{
+    text-transform: uppercase;
+    padding-bottom: 20px;
+    color: #ff3377;
+}

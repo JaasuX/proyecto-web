@@ -47,7 +47,7 @@ body{
 }
 
 .logo:hover{
-    color: #ff3377
+    color: #ff3377;
 }
 
 .menu .navbar ul li{
@@ -130,7 +130,7 @@ body{
     color: black;
     padding: 30px;
     width: 350px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     border-radius: 25px;
 }
 

@@ -1,0 +1,69 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Cabin", sans-serif;
+    background-color: white;
+}
+
+.form-register{
+    width: 400px;
+    background-color: white;
+    padding: 50px;
+    margin: auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.form-register h2{
+    margin-bottom: 30px;
+}
+
+.input{
+    width: 100%;
+    padding: 15px;
+    font-family: "Cabin";
+    font-size: 16px;
+    margin-bottom: 30px;
+    border-radius: 25px;
+    border: 2px solid #c5c5c5;
+    transition: border 0.3s ease;
+}
+
+.input:hover{
+    border: 2px solid #555555;
+}
+
+.btn-1{
+    margin: 30px 0;
+    padding: 11px 35px;
+    width: 100%;
+    border-radius: 25px;
+    border: none;
+    background-color: #ff3377;
+    color: #fffdfc;
+    font-family: "Cabin";
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-1:hover{
+    background-color: #ff4885;
+}
+
+h2{
+    font-size: 30px;
+    color: #555555;
+}
+
+p{
+    font-size: 16px;
+    color: #555555;
+}
+

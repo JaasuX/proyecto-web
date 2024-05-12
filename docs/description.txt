@@ -1,0 +1,30 @@
+Se debe crear un sitio web que tenga la información de un salón de eventos. 
+Permite la reservación de fechas, distribución de mesas e invitados para un evento social. 
+
+Los usuarios se registran. Los usuarios inician sesión. 
+Si el usuario inicia sesión sin haberse registrado, se le redirige a la página de registro. 
+Una vez registrado, al usuario le aparecerá la página donde podrá crear el evento. 
+
+Los eventos disponibles son: 
+    Graduación
+    Boda
+    Bautizo
+    XV años
+    Reunión familiar
+    Reunión de negocios
+    Otro (especificar)
+
+*El usuario solo puede seleccionar un evento*
+
+El usuario elige la fecha del evento (si está disponible).
+El usuario elige la hora del evento. 
+
+El usuario puede registar el nombre de las personas que asistirán a dicho evento. También puede modificarlos o eliminarlos. 
+
+El usuario elige la distribución de las mesas, meseros, grupo musical, pista de baile y bocinas. Todos estos elementos son *drag and drop*.
+
+El usuario indica que invitado ocupará cada mesa. 
+
+Después de realizar los pasos anteriores, se indican los nombres de los invitados que ocuparán cada mesa (8 personas por mesa máximo).
+
+Al pasar el cursor sobre una mesa se muestra el menú de la mesa así como una lista de los nombres asignados a esa mesa donde también se puede eliminar a los invitados asignados. 

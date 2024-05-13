@@ -96,7 +96,7 @@ body{
     display: flex;
     justify-content: center;
     align-content: center;
-    background-color: #ff4885;
+    background-image: linear-gradient(to right, #103ce7, #64e9ff);
     height: 100px;
     text-align: center;
 

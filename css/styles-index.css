@@ -17,8 +17,8 @@ body{
 
 .header{
     background-image: linear-gradient(
-        rgba(0, 0, 0, 0.7), 
-        rgba(0, 0, 0, 0.7)),
+        rgba(0, 0, 0, 0.6), 
+        rgba(0, 0, 0, 0.6)),
         url(/img/imagen-principal2.jpg);
 
     background-position: center bottom;
@@ -123,14 +123,16 @@ body{
     align-items: center;
     justify-content: center;
     gap: 50px;
+    background-color: white;
 }
 
 .card{
     text-align: center;
     color: black;
+    background-color: white;
     padding: 30px;
     width: 350px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
     border-radius: 25px;
 }
 
@@ -149,7 +151,7 @@ body{
     display: flex;
     justify-content: center;
     align-content: center;
-    background-image: linear-gradient(to right, #103ce7, #64e9ff);
+    background-color: black;
     height: 100px;
     text-align: center;
 

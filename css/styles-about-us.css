@@ -90,13 +90,11 @@ body{
     background-color: #ff4885;
 }
 
-
-
 .footer{
     display: flex;
     justify-content: center;
     align-content: center;
-    background-image: linear-gradient(to right, #103ce7, #64e9ff);
+    background-color: black;
     height: 100px;
     text-align: center;
 

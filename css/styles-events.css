@@ -74,6 +74,22 @@ body{
     display: none;
 }
 
+
+
+.btn-1{
+    display: inline-block;
+    padding: 11px 35px;
+    background-color: #ff3377;
+    color: #fffdfc;
+    text-transform: uppercase;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-1:hover{
+    background-color: #ff4885;
+}
+
 .footer{
     display: flex;
     justify-content: center;
@@ -88,3 +104,10 @@ body{
     color: #fffdfc;
     margin-top: 30px;
 }
+
+.info{
+    width: 700px;
+    margin: auto;
+    padding: 30px;
+}
+

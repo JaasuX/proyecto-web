@@ -1,3 +1,7 @@
+:root{
+    
+}
+
 body{
     font-family: "Cabin", sans-serif;
 }
@@ -146,5 +150,14 @@ body{
 
 .event-card p{
     width: 300px;
+}
+
+.titulo{
+    margin-bottom: 30px;
+    font-size: 30px;
+}
+
+.menus{
+    text-align: center;
 }
 

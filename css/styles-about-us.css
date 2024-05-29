@@ -110,3 +110,25 @@ body{
     margin: auto;
     padding: 30px;
 }
+
+.devs-container{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.devs-container img{
+    width: 250px;
+    border-radius: 50%;
+}
+
+
+.dev{
+    text-align: center;
+    padding: 20px;
+    border-radius: 25px;
+}
+
+.dev h3{
+    margin-bottom: 30px;
+}

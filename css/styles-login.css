@@ -1,3 +1,7 @@
+:root{
+    --principal: #fa1e6d;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -46,7 +50,7 @@ body{
     width: 100%;
     border-radius: 25px;
     border: none;
-    background-color: #ff3377;
+    background-color: var(--principal);
     color: #fffdfc;
     font-family: "Cabin";
     font-size: 16px;

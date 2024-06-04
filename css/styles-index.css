@@ -1,3 +1,7 @@
+:root{
+    --principal: #fa1e6d;
+}
+
 body{
     font-family: "Cabin", sans-serif;
 }
@@ -47,7 +51,7 @@ body{
 }
 
 .logo:hover{
-    color: #ff3377;
+    color: var(--principal);
 }
 
 .menu .navbar ul li{
@@ -65,7 +69,7 @@ body{
 }
 
 .menu .navbar ul li a:hover{
-    color: #ff3377;
+    color: var(--principal);
 }
 
 #menu{
@@ -104,7 +108,7 @@ body{
 .btn-1{
     display: inline-block;
     padding: 11px 35px;
-    background-color: #ff3377;
+    background-color: var(--principal);
     color: #fffdfc;
     text-transform: uppercase;
     border-radius: 25px;
@@ -153,7 +157,7 @@ body{
 .card h2{
     text-transform: uppercase;
     padding-bottom: 20px;
-    color: #ff3377;
+    color: var(--principal);
 }
 
 .footer{

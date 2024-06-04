@@ -1,5 +1,5 @@
 :root{
-    
+    --principal: #fa1e6d;
 }
 
 body{
@@ -44,7 +44,7 @@ body{
 }
 
 .logo:hover{
-    color: #ff3377;
+    color: var(--principal);
 }
 
 .menu .navbar ul li{
@@ -62,7 +62,7 @@ body{
 }
 
 .menu .navbar ul li a:hover{
-    color: #ff3377;
+    color: var(--principal);
 }
 
 #menu{
@@ -78,12 +78,10 @@ body{
     display: none;
 }
 
-
-
 .btn-1{
     display: inline-block;
     padding: 11px 35px;
-    background-color: #ff3377;
+    background-color: var(--principal);
     color: #fffdfc;
     text-transform: uppercase;
     border-radius: 25px;
@@ -159,5 +157,16 @@ body{
 
 .menus{
     text-align: center;
+}
+
+.menu-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.menu-card{
+    display: flex;
+    flex-direction: column;
 }
 

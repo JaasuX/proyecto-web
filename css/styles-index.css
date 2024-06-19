@@ -1,9 +1,9 @@
 :root{
     --principal: #fa1e6d;
-}
-
-body{
-    font-family: "Cabin", sans-serif;
+    --principalClaro: #ff347f;
+    --blanco: #f8f8ff;
+    --grisClaro: #dfdfdf;
+    --grisOscuro: #555555;
 }
 
 *{
@@ -14,16 +14,37 @@ body{
     list-style: none;
 }
 
+body{
+    font-family: "Cabin", sans-serif;
+    background-color: var(--blanco);
+}
+
+h1{
+    font-size: 75px;
+}
+
+h2{
+    font-size: 50px;
+}
+
+h3{
+    font-size: 40px;
+}
+
+h4{
+    font-size: 25px;
+}
+
 .container{
     max-width: 1200px;
     margin: 0 auto;
 }
 
 .header{
-    background-image: linear-gradient(
-        rgba(0, 0, 0, 0.6), 
-        rgba(0, 0, 0, 0.6)),
-        url(/img/imagen-principal2.jpg);
+    
+
+    background-image: linear-gradient(to right, #103ce7, #64e9ff);
+    
 
     background-position: center bottom;
     background-repeat: no-repeat;
@@ -44,7 +65,7 @@ body{
 }
 
 .logo{
-    color: #fffdfc;
+    color: var(--blanco);
     font-size: 25px;
     font-weight: 800px;
     transition: color 0.3s ease;
@@ -62,7 +83,7 @@ body{
 .menu .navbar ul li a{
     font-size: 18px;
     padding: 20px;
-    color: #fffdfc;
+    color: var(--blanco);
     display: block;
     font-weight: 600;
     transition: color 0.3s ease;
@@ -87,20 +108,19 @@ body{
 
 .header-content{
     text-align: center;
-
 }
 
 .header-content h1{
     font-size: 75px;
     line-height: 80px;
-    color: #fffdfc;
+    color: var(--blanco);
     text-transform: uppercase;
     margin-bottom: 35px;
 }
 
 .header-content p{
     font-size: 16px;
-    color: #c5c5c5;
+    color: #e6e6e6;
     padding: 0 250px;
     margin-bottom: 25px;
 }
@@ -109,14 +129,35 @@ body{
     display: inline-block;
     padding: 11px 35px;
     background-color: var(--principal);
-    color: #fffdfc;
+    color: var(--blanco);
     text-transform: uppercase;
     border-radius: 25px;
     transition: background-color 0.3s ease;
 }
 
 .btn-1:hover{
-    background-color: #ff4885;
+    background-color: var(--principalClaro);
+}
+
+.servicios{
+    text-align: center;
+}
+
+.servicios h2{
+    color: var(--principal);
+}
+
+.servicios__bienvenida{
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    max-width: 1000px;
+    padding: 30px;
+}
+
+.servicios__bienvenida img{
+    max-width: 450px;
+    border-radius: 25px;
 }
 
 .card-container{
@@ -132,14 +173,30 @@ body{
 
 .card{
     text-align: center;
-    color: black;
-    background-color: white;
+    color: var(--grisOscuro);
     padding: 30px;
     width: 350px;
     height: 300px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    border: 1px solid var(--grisClaro);
     border-radius: 25px;
 }
+
+.card svg{
+    
+}
+
+/*.card1{
+    background: linear-gradient(45deg, rgba(0,138,255,1) 0%, rgba(0,255,179,1) 100%);
+}
+
+.card2{
+    background: linear-gradient(45deg, rgba(255,79,53,1) 0%, rgba(255,47,90,1) 100%);
+}
+
+.card3{
+    background: linear-gradient(45deg, rgba(31,98,252,1) 0%, rgba(171,44,254,1) 100%);
+}
+*/
 
 .info-card{
     transition: transform 0.3s ease;
@@ -157,7 +214,7 @@ body{
 .card h2{
     text-transform: uppercase;
     padding-bottom: 20px;
-    color: var(--principal);
+    color: white;
 }
 
 .footer{
@@ -171,6 +228,6 @@ body{
 }
 
 .footer h3{
-    color: #fffdfc;
+    color: var(--blanco);
     margin-top: 30px;
 }

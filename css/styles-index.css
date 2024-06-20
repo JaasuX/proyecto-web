@@ -143,8 +143,27 @@ h4{
     text-align: center;
 }
 
-.servicios h2{
+.servicios__titulo{
     color: var(--principal);
+    margin-top: 3rem;
+}
+
+.bienvenida{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.bienvenida img{
+    width: 40rem;
+}
+
+.bienvenida__titulo, .bienvenida__texto{
+    width: 40rem;
+}
+
+.bienvenida__iconos{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 }
 
 .servicios__bienvenida{
@@ -227,7 +246,8 @@ h4{
 
 }
 
-.footer h3{
+.footer__titulo{
     color: var(--blanco);
     margin-top: 30px;
+    font-size: 20px;
 }

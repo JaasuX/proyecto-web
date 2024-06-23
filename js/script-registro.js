@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
     const form = document.querySelector("form");
-    
+
     form.addEventListener("submit", function(event) {
         const nombre = document.getElementById("nombre").value;
         const apellido = document.getElementById("apellido").value;
@@ -11,6 +11,10 @@ document.addEventListener("DOMContentLoaded", function() {
         if (!validateNombre(nombre) || !validateApellido(apellido) || !validateEmail(email) || !validatePassword(password) || !validateUsuario(usuario)) {
             event.preventDefault();
             alert("Por favor, asegúrate de que todos los campos estén correctamente llenados.");
+        } else {
+            // Simula el registro exitoso y redirige a la página de inicio de sesión
+            alert("Registro exitoso. Por favor, inicia sesión.");
+            window.location.href = "login.html";
         }
     });
 

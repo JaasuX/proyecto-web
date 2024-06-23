@@ -8,6 +8,9 @@ document.addEventListener("DOMContentLoaded", function() {
         if (!validateEmail(email) || !validatePassword(password)) {
             event.preventDefault();
             alert("Por favor, asegúrate de que todos los campos estén correctamente llenados.");
+        } else {
+            //autenticación exitosa
+            sessionStorage.setItem('loggedIn', 'true');
         }
     });
 

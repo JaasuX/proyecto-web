@@ -1,5 +1,5 @@
 :root{
-    
+    --principal: #fa1e6d;
 }
 
 body{
@@ -44,7 +44,7 @@ body{
 }
 
 .logo:hover{
-    color: #ff3377;
+    color: var(--principal);
 }
 
 .menu .navbar ul li{
@@ -62,7 +62,7 @@ body{
 }
 
 .menu .navbar ul li a:hover{
-    color: #ff3377;
+    color: var(--principal);
 }
 
 #menu{
@@ -78,12 +78,10 @@ body{
     display: none;
 }
 
-
-
 .btn-1{
     display: inline-block;
     padding: 11px 35px;
-    background-color: #ff3377;
+    background-color: var(--principal);
     color: #fffdfc;
     text-transform: uppercase;
     border-radius: 25px;
@@ -98,6 +96,7 @@ body{
     display: flex;
     justify-content: center;
     align-content: center;
+    margin-top: 3rem;
     background-color: black;
     height: 100px;
     text-align: center;
@@ -145,7 +144,6 @@ body{
     width: 400px;
     height: 400px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
-
 }
 
 .event-card p{
@@ -158,6 +156,40 @@ body{
 }
 
 .menus{
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menus h2{
+    margin-top: 45px;
+}
+
+.menus img{
+    border-radius: 16px;
+    width: 300px;
+    height: 180px;
+}
+
+.menu-container{
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+}
+
+.menu-card{
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    border-radius: 25px;
+}
+
+.menu-card h3{
+    margin-bottom: 20px;
+}
+
+.menu-detalles{
+    display: flex;
+    align-items: center;
+    gap: 30px;
 }
 

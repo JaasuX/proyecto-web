@@ -1,3 +1,8 @@
+:root{
+    --principal: #fa1e6d;
+    --blanco: #f8f8ff;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -11,12 +16,12 @@ body{
 
 .form-register{
     width: 400px;
-    background-color: white;
+    background-color: var(--blanco);
     padding: 50px;
     margin: auto;
     margin-top: 100px;
     margin-bottom: 100px;
-    border-radius: 25px;
+    border-radius: 10px;
     text-align: center;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
 }
@@ -32,6 +37,7 @@ body{
     font-size: 16px;
     margin-bottom: 30px;
     border-radius: 25px;
+    background-color: var(--blanco);
     border: 2px solid #c5c5c5;
     transition: border 0.3s ease;
 }
@@ -46,8 +52,8 @@ body{
     width: 100%;
     border-radius: 25px;
     border: none;
-    background-color: #ff3377;
-    color: #fffdfc;
+    background-color: var(--principal);
+    color: var(--blanco);
     font-family: "Cabin";
     font-size: 16px;
     transition: background-color 0.3s ease;

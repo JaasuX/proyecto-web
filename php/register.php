@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,7 +11,6 @@
 </head>
 <body>
     <section class="form-register">
-        
         <form action="registro.php" method="POST">
             <h2>Crea tu cuenta</h2>
 
@@ -27,12 +26,15 @@
             <input class="input" type="password" id="password" name="password" required placeholder="Ingresa tu contraseña">
             <input class="input" type="text" id="usuario" name="usuario" required placeholder="Ingresa un nombre de usuario">
             <p>Estoy de acuerdo con los términos y condiciones.</p>
-
             <input class="btn-1" type="submit" value="REGISTRAR">
-
             <p>¿Ya tienes cuenta? <a href="login.html"> Inicia sesión aquí.</a></p>
-    </form>
+        </form>
     </section>
+    <?php
+    include("php/registrar.php");
+    include("php/conexion.php");
+    ?>
+    <script src="js/script-registro.js"></script>
 </body>
 
 <?php

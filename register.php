@@ -13,6 +13,13 @@
     <section class="form-register">
         <form action="registro.php" method="POST">
             <h2>Crea tu cuenta</h2>
+
+            <?php
+            // Mostrar mensaje de éxito si el registro fue correcto
+            if (isset($_GET['status']) && $_GET['status'] == 'success') {
+                echo '<p style="color: green;">Usuario registrado correctamente</p>';
+            }
+            ?>
             <input class="input" type="text" id="nombre" name="nombre" required placeholder="Ingresa tu nombre">
             <input class="input" type="text" id="apellido" name="apellido" required placeholder="Ingresa tu apellido">
             <input class="input" type="email" id="email" name="email" required placeholder="Ingresa tu correo electrónico">
@@ -29,4 +36,10 @@
     ?>
     <script src="js/script-registro.js"></script>
 </body>
+
+<?php
+    include("registro.php");
+    include("conexion.php");
+    ?>
+
 </html>

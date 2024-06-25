@@ -6,7 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles-register.css">
+    <link rel="stylesheet" href="../css/styles-register.css">
     <title>PartyMaker - Registro</title>
 </head>
 <body>
@@ -27,14 +27,14 @@
             <input class="input" type="text" id="usuario" name="usuario" required placeholder="Ingresa un nombre de usuario">
             <p>Estoy de acuerdo con los términos y condiciones.</p>
             <input class="btn-1" type="submit" value="REGISTRAR">
-            <p>¿Ya tienes cuenta? <a href="login.html"> Inicia sesión aquí.</a></p>
+            <p>¿Ya tienes cuenta? <a href="/login.html"> Inicia sesión aquí.</a></p>
         </form>
     </section>
     <?php
     include("php/registrar.php");
     include("php/conexion.php");
     ?>
-    <script src="js/script-registro.js"></script>
+    <script src="../js/script-registro.js"></script>
 </body>
 
 <?php

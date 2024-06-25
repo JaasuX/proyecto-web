@@ -1,12 +1,20 @@
+<?php
+session_start();
+if (!isset($_SESSION['loggedin'])) {
+    header("Location: loginUsu.php");
+    exit();
+}
+?>
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/styles-reservation.css">
+    <link rel="stylesheet" href="../css/styles-reservation.css">
     <title>PartyMaker - Reservaciones</title>
 </head>
 <body>
@@ -20,10 +28,8 @@
             <nav class="navbar">
                 <ul>
                     <li><a href="index.html">Inicio</a></li>
-                    <li><a href="register.html">Registro</a></li>
-                    <li><a href="login.html">Iniciar sesión</a></li>
                     <li><a href="about-us.html">Quiénes somos</a></li>
-                    <li><a href="reservation.html">Reservaciones</a></li>
+                    <li><a href="">Cerrar Sesión</a></li>
                     <li><a href="#">Contacto</a></li>
                 </ul>
             </nav>
@@ -81,14 +87,7 @@
         <h3>Copyright &copy; 2024 Party Maker. Todos los derechos reservados.</h3>
     </footer>
 
-    <script src="/js/script-reservacion.js"></script>
-    <script src="/js/salon-setup.js"></script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            if (!sessionStorage.getItem('loggedIn')) {
-                window.location.href = "login.html";
-            }
-        });
-    </script>    
+    <script src="../js/script-reservacion.js"></script>
+    <script src="../js/salon-setup.js"></script>
 </body>
 </html>

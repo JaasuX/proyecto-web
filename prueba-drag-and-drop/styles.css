@@ -17,6 +17,13 @@ body {
     cursor: grab;
 }
 
+.main-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
 .event-hall {
     flex-grow: 1;
     padding: 20px;
@@ -33,4 +40,25 @@ body {
     width: 100px;
     height: auto;
     cursor: move;
+}
+
+.tables-info {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-top: 1px solid #ccc;
+}
+
+#guest-form {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+#guest-form select,
+#guest-form input {
+    margin-right: 10px;
+}
+
+#guest-list {
+    list-style-type: none;
+    padding: 0;
 }

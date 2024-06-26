@@ -1,8 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
     const draggables = document.querySelectorAll('.draggable');
     const eventHall = document.getElementById('event-hall');
+    const tableSelect = document.getElementById('table-select');
+    const guestForm = document.getElementById('guest-form');
+    const guestList = document.getElementById('guest-list');
     let draggedElement = null;
     let offsetX, offsetY;
+    let tableCount = 0;
+    const tables = {};
 
     draggables.forEach(draggable => {
         draggable.addEventListener('dragstart', (e) => {
@@ -34,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
             newElement.src = draggedElement.src;
             newElement.alt = draggedElement.alt;
             newElement.className = 'draggable-element';
-            newElement.id = `${id}-instance`;
+            newElement.id = id === 'table' ? `table-${tableCount}` : `${id}-instance`;
             newElement.style.left = `${e.clientX - eventHall.offsetLeft - offsetX}px`;
             newElement.style.top = `${e.clientY - eventHall.offsetTop - offsetY}px`;
             newElement.draggable = true;
@@ -47,6 +52,13 @@ document.addEventListener('DOMContentLoaded', () => {
             });
 
             eventHall.appendChild(newElement);
+
+            // If the new element is a table, add it to the table list
+            if (id === 'table') {
+                tables[`table-${tableCount}`] = [];
+                updateTableSelect();
+                tableCount++;
+            }
         } else {
             // Move the existing element
             draggedElement.style.left = `${e.clientX - eventHall.offsetLeft - offsetX}px`;
@@ -56,4 +68,37 @@ document.addEventListener('DOMContentLoaded', () => {
         // Reset dragged element
         draggedElement = null;
     });
+
+    guestForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const tableId = tableSelect.value;
+        const guestName = document.getElementById('guest-name').value.trim();
+
+        if (guestName && tableId && tables[tableId].length < 8) {
+            tables[tableId].push(guestName);
+            updateGuestList(tableId);
+            document.getElementById('guest-name').value = '';
+        } else if (tables[tableId].length >= 8) {
+            alert('Esta mesa ya tiene 8 invitados.');
+        }
+    });
+
+    function updateTableSelect() {
+        tableSelect.innerHTML = '';
+        Object.keys(tables).forEach(tableId => {
+            const option = document.createElement('option');
+            option.value = tableId;
+            option.textContent = tableId;
+            tableSelect.appendChild(option);
+        });
+    }
+
+    function updateGuestList(tableId) {
+        guestList.innerHTML = '';
+        tables[tableId].forEach(guest => {
+            const li = document.createElement('li');
+            li.textContent = `${guest} (Mesa: ${tableId})`;
+            guestList.appendChild(li);
+        });
+    }
 });

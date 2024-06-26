@@ -15,8 +15,19 @@
         <img src="pista_baile.png" alt="Pista de Baile" class="draggable" draggable="true" id="dancefloor">
         <img src="bocinas.png" alt="Bocinas" class="draggable" draggable="true" id="speakers">
     </div>
-    <div class="event-hall" id="event-hall">
-        <h2>Salón de Eventos</h2>
+    <div class="main-content">
+        <div class="event-hall" id="event-hall">
+            <h2>Salón de Eventos</h2>
+        </div>
+        <div class="tables-info" id="tables-info">
+            <h3>Invitados por Mesa</h3>
+            <form id="guest-form">
+                <select id="table-select"></select>
+                <input type="text" id="guest-name" placeholder="Nombre del Invitado">
+                <button type="submit">Agregar Invitado</button>
+            </form>
+            <ul id="guest-list"></ul>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>

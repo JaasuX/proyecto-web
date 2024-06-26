@@ -188,7 +188,7 @@ h4{
     align-items: center;
     justify-content: center;
     gap: 50px;
-    background-color: white;
+    background-color: var(--blanco);
 }
 
 .card{

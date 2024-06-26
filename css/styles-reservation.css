@@ -117,12 +117,22 @@ body {
     transition: background-color 0.3s ease;
 }
 
+.form h2{
+    margin-bottom: 30px;
+}
+
+.margin-top{
+    margin-top: 30px;
+}
+
 .options-container{
     background-color: var(--blanco);
     width: 90%;
     margin: 5rem auto 0 auto;
     padding: 30px;
     border-radius: 25px;
+    font-family: var(--fuentePrincipal);
+    font-size: 20px;
 }
 
 .configuracion{
@@ -158,10 +168,14 @@ body {
     
 }
 
+.subtitulo{
+    font-size: 30px;
+}
+
 .event-hall {
     flex-grow: 1;
     padding: 20px;
-    background-color: #e0e0e0;
+    background-color: #e9e9e9;
     border-radius: 0 25px 0 0;
     position: relative;
     height: 15rem;

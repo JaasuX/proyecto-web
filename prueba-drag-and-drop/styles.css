@@ -11,10 +11,9 @@ body {
 }
 
 .draggable {
-    padding: 10px;
+    width: 100px;
+    height: auto;
     margin: 10px 0;
-    background-color: #fff;
-    border: 1px solid #ccc;
     cursor: grab;
 }
 
@@ -31,8 +30,7 @@ body {
 
 .draggable-element {
     position: absolute;
-    padding: 10px;
-    background-color: #fff;
-    border: 1px solid #ccc;
+    width: 100px;
+    height: auto;
     cursor: move;
 }

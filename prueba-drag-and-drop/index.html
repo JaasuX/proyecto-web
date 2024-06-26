@@ -3,24 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Distribución de Salón</title>
+    <title>Reservaciones para Eventos</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Distribución de Salón</h1>
-    <div id="salon" ondrop="drop(event)" ondragover="allowDrop(event)">
-        <!-- Lienzo donde se sueltan los elementos -->
+    <div class="sidebar">
+        <h2>Elementos</h2>
+        <div class="draggable" draggable="true" id="table">Mesa</div>
+        <div class="draggable" draggable="true" id="waiter">Mesero</div>
+        <div class="draggable" draggable="true" id="band">Grupo Musical</div>
+        <div class="draggable" draggable="true" id="dancefloor">Pista de Baile</div>
+        <div class="draggable" draggable="true" id="speakers">Bocinas</div>
     </div>
-
-    <div id="elementos">
-        <div class="draggable" id="mesa" draggable="true" ondragstart="drag(event)">Mesa</div>
-        <div class="draggable" id="mesero" draggable="true" ondragstart="drag(event)">Mesero</div>
-        <div class="draggable" id="grupo" draggable="true" ondragstart="drag(event)">Grupo Musical</div>
-        <div class="draggable" id="pista" draggable="true" ondragstart="drag(event)">Pista de Baile</div>
-        <div class="draggable" id="bocina" draggable="true" ondragstart="drag(event)">Bocina</div>
-        <!-- Añadir en caso de ser necesario -->
+    <div class="event-hall" id="event-hall">
+        <h2>Salón de Eventos</h2>
     </div>
-
-    <script src="scripts.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

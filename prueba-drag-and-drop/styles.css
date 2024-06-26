@@ -1,28 +1,38 @@
 body {
+    display: flex;
     font-family: Arial, sans-serif;
 }
 
-#salon {
-    width: 80%;
-    height: 500px;
-    border: 2px solid #000;
-    margin: 20px auto;
-    position: relative;
-}
-
-#elementos {
-    width: 80%;
-    margin: 20px auto;
-    display: flex;
-    justify-content: space-around;
+.sidebar {
+    width: 200px;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-right: 1px solid #ccc;
 }
 
 .draggable {
-    width: 100px;
-    height: 100px;
-    border: 1px solid #000;
-    text-align: center;
-    line-height: 100px;
-    cursor: move;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    cursor: grab;
+}
+
+.event-hall {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #e0e0e0;
+    position: relative;
+}
+
+.event-hall h2 {
+    margin: 0;
+}
+
+.draggable-element {
     position: absolute;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    cursor: move;
 }

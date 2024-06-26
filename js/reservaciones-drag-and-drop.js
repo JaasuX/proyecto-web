@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
             newElement.className = 'draggable-element';
             newElement.id = id === 'table' ? `table-${tableCount}` : `${id}-instance`;
             newElement.style.left = `${e.clientX - eventHall.offsetLeft - offsetX}px`;
-            newElement.style.top = `${e.clientY - eventHall.offsetTop - offsetY}px`;
+            newElement.style.top = `${e.clientY - eventHall.offsetTop - offsetY + window.scrollY}px`; // Adjusting for scroll position
             newElement.draggable = true;
 
             // Add drag events to the new element
@@ -58,14 +58,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // If the new element is a table, add it to the table list
             if (id === 'table') {
-                tables[`${tableCount + 1}`] = [];
+                tables[`table-${tableCount}`] = [];
                 updateTableSelect();
                 tableCount++;
             }
         } else {
             // Move the existing element
             draggedElement.style.left = `${e.clientX - eventHall.offsetLeft - offsetX}px`;
-            draggedElement.style.top = `${e.clientY - eventHall.offsetTop - offsetY}px`;
+            draggedElement.style.top = `${e.clientY - eventHall.offsetTop - offsetY + window.scrollY}px`; // Adjusting for scroll position
         }
 
         // Reset dragged element
@@ -179,7 +179,11 @@ document.addEventListener('DOMContentLoaded', () => {
     function clearConfiguration() {
         localStorage.removeItem('eventElements');
         localStorage.removeItem('eventTables');
-        location.reload();
+        tables = {};
+        tableCount = 0;
+        updateTableSelect();
+        updateGuestList();
+        eventHall.innerHTML = '<h2>Salón de Eventos</h2>'; // Reset event hall content
     }
 
     saveButton.addEventListener('click', saveConfiguration);

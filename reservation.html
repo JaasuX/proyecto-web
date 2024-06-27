@@ -31,35 +31,33 @@
     <main>
         <div class="options-container">
             <form class="form" id="reservation-form" action="registro.php" method="POST">
-                <h2 class="subtitulo">Reservaciones</h2>
-                <label for="evento">Tipo de evento</label>
-                <select name="evento" id="evento">
-                    <option value="graduacion">Graduación</option>
-                    <option value="boda">Boda</option>
-                    <option value="bautizo">Bautizo</option>
-                    <option value="xvanios">XV años</option>
-                    <option value="reunion-familiar">Reunión familiar</option>
-                    <option value="reunion-negocios">Reunión de negocios</option>
-                </select>
+                <div class="selecciones">
+                    <h2 class="subtitulo">Reservaciones</h2>
+                    <label for="evento">Tipo de evento</label>
+                    <select name="evento" id="evento">
+                        <option value="graduacion">Graduación</option>
+                        <option value="boda">Boda</option>
+                        <option value="bautizo">Bautizo</option>
+                        <option value="xvanios">XV años</option>
+                        <option value="reunion-familiar">Reunión familiar</option>
+                        <option value="reunion-negocios">Reunión de negocios</option>
+                    </select>
+    
+                    <label for="fecha">Fecha</label>
+                    <input type="date" id="fecha" name="fecha" required>
+    
+                    <label for="hora">Hora</label>
+                    <input type="time" id="hora" name="hora" required>
+    
+                    <input class="btn-1" type="submit" value="Reservar">
+                </div>
 
-                <label for="fecha">Fecha</label>
-                <input type="date" id="fecha" name="fecha" required>
-
-                <label for="hora">Hora</label>
-                <input type="time" id="hora" name="hora" required>
-
-                <label for="menu">Menú</label>
-                <select name="menu" id="menu">
-                    <option value="desayuno">Desayuno (9:00 - 12:00)</option>
-                    <option value="comida">Comida (12:00 - 17:00)</option>
-                    <option value="cena">Cena (17:00 - 23:00)</option>
-                </select>
-
-                <h2 class="subtitulo margin-top">Platillos</h2>
-                <div id="platillos"></div>
-
-                <input class="btn-1" type="submit" value="Reservar">
             </form>
+
+            <div class="menus">
+                <h2 class="subtitulo">Platillos</h2>
+                <div id="platillos"></div>
+            </div>
         </div>
 
         <div class="configuracion">
@@ -99,6 +97,6 @@
     </footer>
 
     <script src="js/reservaciones-drag-and-drop.js"></script>
-    <script src="js/menu-handler.js"></script>
+    <script src="js/reservaciones-menu.js"></script>
 </body>
 </html>

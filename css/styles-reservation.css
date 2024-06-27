@@ -117,6 +117,27 @@ body {
     transition: background-color 0.3s ease;
 }
 
+.form{
+    display: flex;
+    flex-direction: column;
+}
+
+.selecciones{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 20%;
+}
+
+#evento, #fecha, #hora{
+    border-radius: 25px;
+    padding: 15px;
+    border: none;
+    background-color: var(--grisClaro);
+    font-family: var(--fuentePrincipal);
+    text-transform: uppercase;
+}
+
 .form h2{
     margin-bottom: 30px;
 }
@@ -126,6 +147,8 @@ body {
 }
 
 .options-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     background-color: var(--blanco);
     width: 90%;
     margin: 5rem auto 0 auto;
@@ -227,6 +250,7 @@ body {
     border-radius: 25px;
     padding: 15px;
     border: none;
+    background-color: var(--grisClaro);
     font-family: var(--fuentePrincipal);
     text-transform: uppercase;
 }

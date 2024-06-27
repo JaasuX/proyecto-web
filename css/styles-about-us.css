@@ -1,9 +1,15 @@
 :root{
     --principal: #fa1e6d;
+    --principalClaro: #ff347f;
+    --blanco: #f8f8ff;
+    --grisClaro: #dfdfdf;
+    --grisOscuro: #414141;
+    --fuentePrincipal: "Cabin";
 }
 
 body{
     font-family: "Cabin", sans-serif;
+    background-color: var(--blanco);
 }
 
 *{
@@ -37,7 +43,7 @@ body{
 }
 
 .logo{
-    color: #fffdfc;
+    color: var(--blanco);
     font-size: 25px;
     font-weight: 800px;
     transition: color 0.3s ease;
@@ -55,7 +61,7 @@ body{
 .menu .navbar ul li a{
     font-size: 18px;
     padding: 20px;
-    color: #fffdfc;
+    color: var(--blanco);
     display: block;
     font-weight: 600;
     transition: color 0.3s ease;
@@ -84,7 +90,7 @@ body{
     display: inline-block;
     padding: 11px 35px;
     background-color: var(--principal);
-    color: #fffdfc;
+    color: var(--blanco);
     text-transform: uppercase;
     border-radius: 25px;
     transition: background-color 0.3s ease;
@@ -105,34 +111,50 @@ body{
 }
 
 .footer h3{
-    color: #fffdfc;
+    color: var(--blanco);
     margin-top: 30px;
 }
 
 .info{
-    width: 700px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 60%;
     margin: auto;
     padding: 30px;
+}
+
+.info img{
+    width: 700px;
+}
+
+hr{
+    height: 1px;
+    margin-top: 30px;
+    color: var(--principal);
 }
 
 .devs-container{
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 70px;
+    margin-bottom: 30px;
 }
 
 .devs-container img{
-    width: 250px;
+    width: 220px;
     border-radius: 50%;
 }
 
 
 .dev{
     text-align: center;
-    padding: 20px;
+    padding: 30px;
+    /*border: var(--grisClaro) 1px solid;*/
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     border-radius: 25px;
 }
 
 .dev h3{
-    margin-bottom: 30px;
+    margin: 25px 0;
 }

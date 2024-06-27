@@ -3,7 +3,7 @@
     --principalClaro: #ff347f;
     --blanco: #f8f8ff;
     --grisClaro: #dfdfdf;
-    --grisOscuro: #555555;
+    --grisOscuro: #414141;
     --fuentePrincipal: "Cabin";
 }
 
@@ -140,46 +140,6 @@ h4{
     background-color: var(--principalClaro);
 }
 
-.servicios{
-    text-align: center;
-}
-
-.servicios__titulo{
-    color: var(--principal);
-    margin-top: 3rem;
-}
-
-.bienvenida{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-}
-
-.bienvenida img{
-    width: 40rem;
-}
-
-.bienvenida__titulo, .bienvenida__texto{
-    width: 40rem;
-}
-
-.bienvenida__iconos{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-}
-
-.servicios__bienvenida{
-    display: flex;
-    gap: 30px;
-    align-items: center;
-    max-width: 1000px;
-    padding: 30px;
-}
-
-.servicios__bienvenida img{
-    max-width: 450px;
-    border-radius: 25px;
-}
-
 .card-container{
     display: flex;
     flex-direction: row;
@@ -197,7 +157,8 @@ h4{
     padding: 30px;
     width: 350px;
     height: 300px;
-    border: 1px solid var(--grisClaro);
+    /*border: 1px solid var(--grisClaro);*/
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     border-radius: 25px;
 }
 

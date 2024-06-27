@@ -27,7 +27,7 @@
             <input class="input" type="text" id="usuario" name="usuario" required placeholder="Ingresa un nombre de usuario">
             <p>Estoy de acuerdo con los términos y condiciones.</p>
             <input class="btn-1" type="submit" value="REGISTRAR">
-            <p>¿Ya tienes cuenta? <a href="/login.html"> Inicia sesión aquí.</a></p>
+            <p>¿Ya tienes cuenta? <a href="php/loginUsu"> Inicia sesión aquí.</a></p>
         </form>
     </section>
     <?php

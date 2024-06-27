@@ -6,4 +6,3 @@ $conex->set_charset("utf8");
 if ($conex->connect_error) {
     die("Conexión fallida: " . $conn->connect_error);
 }
-?>

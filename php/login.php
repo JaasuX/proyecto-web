@@ -25,4 +25,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $error_message = "Correo electrónico o contraseña incorrectos.";
     }
 }
-?>

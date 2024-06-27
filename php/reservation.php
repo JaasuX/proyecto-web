@@ -38,56 +38,78 @@ if (!isset($_SESSION['loggedin'])) {
 
     <main>
         <div class="options-container">
-            <form class="form" id="reservation-form" action="registro.php" method="POST">
-                <h2>Reservaciones</h2>
-                <label for="evento">Tipo de evento</label>
-                <select name="evento" id="evento">
-                    <option value="graduacion">Graduación</option>
-                    <option value="boda">Boda</option>
-                    <option value="bautizo">Bautizo</option>
-                    <option value="xvanios">XV años</option>
-                    <option value="reunion-familiar">Reunión familiar</option>
-                    <option value="reunion-negocios">Reunión de negocios</option>
-                </select>
+            <form class="form" id="reservation-form" action="reservacion.php" method="POST">
+                <div class="selecciones">
+                    <h2 class="subtitulo">Reservaciones</h2>
+                    <label for="evento">Tipo de evento</label>
+                    <select name="evento" id="evento">
+                        <option value="graduacion">Graduación</option>
+                        <option value="boda">Boda</option>
+                        <option value="bautizo">Bautizo</option>
+                        <option value="xvanios">XV años</option>
+                        <option value="reunion-familiar">Reunión familiar</option>
+                        <option value="reunion-negocios">Reunión de negocios</option>
+                    </select>
+    
+                    <label for="fecha">Fecha</label>
+                    <input type="date" id="fecha" name="fecha" required>
+    
+                    <label for="hora">Hora</label>
+                    <input type="time" id="hora" name="hora" required>
+    
+                    <input class="btn-1" type="submit" value="Reservar">
+                </div>
 
-                <label for="fecha">Fecha</label>
-                <input type="date" id="fecha" name="fecha" required>
-
-                <label for="hora">Hora</label>
-                <input type="time" id="hora" name="hora" required>
-
-                <label for="menu">Menú</label>
-                <select name="menu" id="menu">
-                    <option value="desayuno">Desayuno (9:00 - 12:00)</option>
-                    <option value="comida">Comida (12:00 - 17:00)</option>
-                    <option value="cena">Cena (17:00 - 23:00)</option>
-                </select>
-
-                <h3>Platillos</h3>
-                <div id="platillos"></div>
-
-                <input class="btn-1" type="submit" value="Reservar">
             </form>
-        </div>
 
-        <div class="event-list">
-            <h2>Eventos Creados</h2>
-            <ul id="event-list"></ul>
-        </div>
-
-        <div class="salon">
-            <h2>Distribución del Salón</h2>
-            <div id="salon-container">
-                <!-- Aquí se colocarán los elementos de drag and drop -->
+            <div class="menus">
+                <h2 class="subtitulo">Platillos</h2>
+                <div id="platillos"></div>
             </div>
         </div>
+
+        <div class="configuracion">
+            <div class="sidebar">
+                <h2 class="subtitulo">Elementos</h2>
+                <img src="reservaciones/mesa.png" alt="Mesa" class="draggable" draggable="true" id="table">
+                <img src="reservaciones/mesero.png" alt="Mesero" class="draggable" draggable="true" id="waiter">
+                <img src="reservaciones/grupo_musical.png" alt="Grupo Musical" class="draggable" draggable="true" id="band">
+                <img src="reservaciones/pista_baile.png" alt="Pista de Baile" class="draggable" draggable="true" id="dancefloor">
+                <img src="reservaciones/bocinas.png" alt="Bocinas" class="draggable" draggable="true" id="speakers">
+            </div>
+            <div class="main-content">
+                <div class="event-hall" id="event-hall">
+                    <h2 class="subtitulo">Salón de Eventos</h2>
+                </div>
+                <div class="tables-info" id="tables-info">
+                    <h3 class="invitados">Invitados por Mesa</h3>
+                    <form id="guest-form">
+                        <select id="table-select"></select>
+                        <input type="text" id="guest-name" placeholder="Nombre del Invitado">
+                        <button type="submit">Agregar Invitado</button>
+                    </form>
+                    <ul id="guest-list"></ul>
+                    <div class="buttons">
+                        <button class="btn-1" id="save-config">Guardar</button>
+                        <button class="btn-1" id="load-config">Cargar</button>
+                        <button class="btn-2" id="clear-config">Eliminar Configuración</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </main>
 
     <footer class="footer">
         <h3>Copyright &copy; 2024 Party Maker. Todos los derechos reservados.</h3>
     </footer>
 
-    <script src="../js/script-reservacion.js"></script>
-    <script src="../js/salon-setup.js"></script>
+    <script src="js/reservaciones-drag-and-drop.js"></script>
+    <script src="js/reservaciones-menu.js"></script>
 </body>
+<?php
+    include("reservacion.php");
+    include("conexion.php");
+    ?>
+
 </html>

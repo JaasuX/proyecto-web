@@ -1,54 +1,48 @@
+<?php
+session_start();
+$isLoggedIn = isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true;
+?>
+
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="css/styles-index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles-index.css">
     <title>PartyMaker - Inicio</title>
 </head>
-
 <body>
     <div id="session-status" data-logged-in="<?php echo $isLoggedIn ? 'true' : 'false'; ?>"></div>
     <header class="header">
         <div class="menu container">
-            <a class="logo" href="index.html">Party Maker</a>
+            <a class="logo" href="index.php">Party Maker</a>
             <input type="checkbox" id="menu">
             <label for="menu">
                 <img class="menu-icono" src="" alt="">
             </label>
-
             <nav class="navbar">
-                <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="php/register.php">Registro</a></li>
-                    <li><a href="php/loginUsu.php">Iniciar sesión</a></li>
+                <ul id="navbar-links">
+                    <li><a href="index.php">Inicio</a></li>
+                    <li><a href="register.php">Registro</a></li>
+                    <li><a href="loginUsu.php">Iniciar sesión</a></li>
                     <li><a href="about-us.html">Quiénes somos</a></li>
-                    <li><a href="php/reservation.php">Reservaciones</a></li>
+                    <li><a href="reservation.php">Reservaciones</a></li>
                     <li><a href="event-menu.html">Eventos y Menú</a></li>
                 </ul>
             </nav>
         </div>
-
         <div class="header-content container">
-
             <h1>Party Maker</h1>
-            <p>Haz realidad tus eventos soñados con nosotros. En Party Maker, nos dedicamos a convertir tus
-                celebraciones en momentos inolvidables. Reserva ahora y deja que nuestro salón de eventos sea el
-                escenario perfecto para tus momentos más especiales.</p>
+            <p>Haz realidad tus eventos soñados con nosotros. En Party Maker, nos dedicamos a convertir tus celebraciones en momentos inolvidables. Reserva ahora y deja que nuestro salón de eventos sea el escenario perfecto para tus momentos más especiales.</p>
             <a class="btn-1" href="#">Reserva Ahora</a>
         </div>
-
     </header>
-
     <main>
-
         <section class="bienvenida">
-            <div>
+        <div>
                 <img src="img/index/salon2.jpg" alt="salon">
             </div>
             <div>
@@ -88,12 +82,8 @@
                 </div>
             </div>
         </section>
-
-        </section>
-
         <section class="card-container">
-
-            <div class="info-card">
+        <div class="info-card">
                 <div class="card card1">
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-map-pin-2" width="80"
                         height="80" viewBox="0 0 24 24" stroke-width="1" stroke="#000000" fill="none"
@@ -157,13 +147,9 @@
 
         </section>
     </main>
-
     <footer class="footer">
         <h3 class="footer__titulo">Copyright &copy; 2024 Party Maker. Todos los derechos reservados.</h3>
-        <form id="logout-form" action="php/logout.php" method="POST" style="display: none;"></form>
     </footer>
-
-    <script src="js/script-login.js"></script>
+    <script src="../js/script-sesion.js"></script>
 </body>
-
 </html>

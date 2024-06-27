@@ -4,6 +4,12 @@ if (!isset($_SESSION['loggedin'])) {
     header("Location: loginUsu.php");
     exit();
 }
+$isLoggedIn = isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true;
+if (!$isLoggedIn) {
+    header("Location: ../index.php");
+    exit();
+}
+?>
 ?>
 
 <!DOCTYPE html>
@@ -18,6 +24,7 @@ if (!isset($_SESSION['loggedin'])) {
     <title>PartyMaker - Reservaciones</title>
 </head>
 <body>
+
     <header class="header">
         <div class="menu container">
             <a class="logo" href="index.html">Party Maker</a>
@@ -27,9 +34,8 @@ if (!isset($_SESSION['loggedin'])) {
             </label>
             <nav class="navbar">
                 <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="about-us.html">Quiénes somos</a></li>
-                    <li><a href="">Cerrar Sesión</a></li>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="../about-us.html">Quiénes somos</a></li>
                     <li><a href="#">Contacto</a></li>
                 </ul>
             </nav>
@@ -85,9 +91,11 @@ if (!isset($_SESSION['loggedin'])) {
 
     <footer class="footer">
         <h3>Copyright &copy; 2024 Party Maker. Todos los derechos reservados.</h3>
+        <form id="logout-form" action="php/logout.php" method="POST" style="display: none;"></form>
     </footer>
 
     <script src="../js/script-reservacion.js"></script>
     <script src="../js/salon-setup.js"></script>
+    <script src="../js/script-login.js"></script>
 </body>
 </html>

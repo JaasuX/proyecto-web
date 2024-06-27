@@ -1,3 +1,7 @@
+<?php
+session_start();
+$isLoggedIn = isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true;
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>

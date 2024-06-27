@@ -13,6 +13,7 @@
 </head>
 
 <body>
+    <div id="session-status" data-logged-in="<?php echo $isLoggedIn ? 'true' : 'false'; ?>"></div>
     <header class="header">
         <div class="menu container">
             <a class="logo" href="index.html">Party Maker</a>
@@ -24,10 +25,7 @@
             <nav class="navbar">
                 <ul>
                     <li><a href="index.html">Inicio</a></li>
-                    <li><a href="register.html">Registro</a></li>
-                    <li><a href="login.html">Iniciar sesión</a></li>
                     <li><a href="about-us.html">Quiénes somos</a></li>
-                    <li><a href="reservation.html">Reservaciones</a></li>
                     <li><a href="event-menu.html">Eventos y Menú</a></li>
                 </ul>
             </nav>
@@ -116,6 +114,7 @@
     <footer class="footer">
         <h3>Copyright &copy; 2024 Party Maker. Todos los derechos reservados.</h3>
     </footer>
+    <script src="js/script-login.js"></script>
 </body>
 
 </html>

@@ -27,9 +27,8 @@ if (!isset($_SESSION['loggedin'])) {
             </label>
             <nav class="navbar">
                 <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="about-us.html">Quiénes somos</a></li>
-                    <li><a href="">Cerrar Sesión</a></li>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="../about-us.html">Quiénes somos</a></li>
                     <li><a href="#">Contacto</a></li>
                 </ul>
             </nav>
@@ -59,13 +58,26 @@ if (!isset($_SESSION['loggedin'])) {
     
                     <input class="btn-1" type="submit" value="Reservar">
                 </div>
-
             </form>
 
-            <div class="menus">
-                <h2 class="subtitulo">Platillos</h2>
-                <div id="platillos"></div>
-            </div>
+            <form class="form" id="menu-form" action="reservacion.php" method="POST">
+                <div class="menus">
+                    <h2 class="titulo">Menús</h2>
+                    <label for="menu_type">Tipo de Menú</label>
+                    <select name="menu_type" id="menu_type">
+                        <option value="desayuno">Desayuno</option>
+                        <option value="comida">Comida</option>
+                        <option value="cena">Cena</option>
+                    </select>
+                    <label for="option1">Opción 1</label>
+                    <input type="text" id="option1" name="option1" required>
+                    <label for="option2">Opción 2</label>
+                    <input type="text" id="option2" name="option2" required>
+                    <label for="option3">Opción 3</label>
+                    <input type="text" id="option3" name="option3" required>
+                    <input class="btn-1" type="submit" value="Guardar Menú">
+                </div>
+            </form>
         </div>
 
         <div class="configuracion">
@@ -104,12 +116,8 @@ if (!isset($_SESSION['loggedin'])) {
         <h3>Copyright &copy; 2024 Party Maker. Todos los derechos reservados.</h3>
     </footer>
 
-    <script src="js/reservaciones-drag-and-drop.js"></script>
-    <script src="js/reservaciones-menu.js"></script>
+    <script src="../js/reservaciones-drag-and-drop.js"></script>
+    <script src="../js/reservaciones-menu.js"></script>
+    <script src="../js/script-reservacion-base.js"></script>
 </body>
-<?php
-    include("reservacion.php");
-    include("conexion.php");
-    ?>
-
 </html>

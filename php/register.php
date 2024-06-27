@@ -31,8 +31,8 @@
         </form>
     </section>
     <?php
-    include("php/registrar.php");
-    include("php/conexion.php");
+    include("registrar.php");
+    include("conexion.php");
     ?>
     <script src="../js/script-registro.js"></script>
 </body>
